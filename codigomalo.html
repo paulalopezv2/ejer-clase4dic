@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  /* --- CÓDIGO A REFACTORIZAR --- */
+  body { font-family: sans-serif; background: #333; margin: 0; }
+  
+  /* Layout mezclado con módulo */
+  #music-wrapper { width: 400px; margin: 50px auto; background: #222; padding: 20px; border-radius: 10px; color: white; text-align: center; }
+  
+  /* Selectores anidados peligrosos */
+  #music-wrapper div img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+  
+  #music-wrapper h2 { margin: 0; color: #1db954; font-size: 24px; }
+  #music-wrapper p { color: #aaa; margin: 5px 0 20px 0; }
+  
+  /* Botones con estilos repetidos */
+  .btn-play { background: #1db954; border: none; padding: 15px 30px; border-radius: 50px; color: white; font-size: 18px; cursor: pointer; }
+  .btn-prev { background: #444; border: none; padding: 10px 20px; border-radius: 50px; color: white; cursor: pointer; margin-right: 10px; }
+  .btn-next { background: #444; border: none; padding: 10px 20px; border-radius: 50px; color: white; cursor: pointer; margin-left: 10px; }
+  
+  /* Estilo dependiente del ID */
+  #music-wrapper .progress-bar { width: 100%; height: 5px; background: #555; margin-bottom: 20px; position: relative; }
+  #music-wrapper .progress-fill { width: 40%; height: 100%; background: #1db954; }
+
+  /* Estado mezclado */
+  .playing-now { border: 2px solid #1db954; }
+</style>
+</head>
+<body>
+
+  <div id="music-wrapper" class="playing-now">
+    <div>
+      <img src="https://via.placeholder.com/300" alt="Album Art">
+    </div>
+    <h2>Bohemian Rhapsody</h2>
+    <p>Queen - A Night at the Opera</p>
+    
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <div>
+      <button class="btn-prev">⏮</button>
+      <button class="btn-play">▶ Play</button>
+      <button class="btn-next">⏭</button>
+    </div>
+  </div>
+
+</body>
+</html>

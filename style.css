@@ -1,0 +1,139 @@
+/*===    BASE  ===*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #333;
+  color: white;
+}
+
+/*===    LAYOUT  ===*/
+
+.l-center {
+  width: 400px;
+  margin: 50px auto;
+}
+
+/*===    MODULR  ===*/
+
+.player {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Estado visual del player */
+.player--active {
+  border: 2px solid #1db954;
+}
+
+/* ART */
+.player__art {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.player__title {
+  color: #1db954;
+  margin: 0;
+  font-size: 24px;
+}
+
+.player__artist {
+  color: #aaa;
+  margin: 5px 0 20px 0;
+}
+
+/* PROGRESS BAR */
+.player__progress {
+  width: 100%;
+  height: 5px;
+  background: #555;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.player__progress-fill {
+  width: 40%;
+  height: 100%;
+  background: #1db954;
+}
+
+/* CONTROLS */
+.player__controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ------------------------- */
+/*     OOCSS BUTTONS         */
+/* ------------------------- */
+
+/* Estructura compartida */
+.btn-control {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+/* Piel (Skin) */
+.skin-primary {
+  background: #1db954;
+}
+
+.skin-secondary {
+  background: #444;
+}
+
+/*===    STATE  ===*/
+
+.is-paused .player__art {
+  opacity: 0.4;
+}
+
+
+/*===    THEME  ===*/
+
+
+.theme-retro .player {
+  background: #f7e36a;      /* Amarillo retro */
+  color: black;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.theme-retro .player__title {
+  color: #c12c2c;           /* Rojo retro */
+}
+
+.theme-retro .player__artist {
+  color: #4a3e1e;           /* Marrón oscuro */
+}
+
+.theme-retro .player__progress {
+  background: #b59f4c;      /* Dorado envejecido */
+}
+
+.theme-retro .player__progress-fill {
+  background: #c12c2c;      /* Rojo retro */
+}
+
+.theme-retro .btn-control.skin-primary {
+  background: #d84c4c;      /* Rojo vintage */
+  color: white;
+}
+
+.theme-retro .btn-control.skin-secondary {
+  background: #7a6a34;      /* Café/mostaza oscuro */
+  color: white;
+}
+
+.theme-retro body {
+  background: #f0d98a;      /* Fondo amarillento retro */
+}
